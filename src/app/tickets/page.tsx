@@ -16,7 +16,7 @@ const TicketsPage = () => {
           <h2 className="text-3-xl font-bold tracking-tight">Tickets page</h2>
           <p className="text-sm text-muted-foreground">All your tickets in one place</p>
         </div>
-        <div className="flex-1 flex flex-col items-center gap-y-4">
+        <div className="flex-1 flex flex-col items-center gap-y-4 animate-fade-from-top">
           {initialTickets.map((ticket) => (
             <div key={ticket.id} className="w-full max-w-[420px] p-4 border border-slate-100 rounded">
               <div>{TICKET_ICONS[ticket.status]}</div>
