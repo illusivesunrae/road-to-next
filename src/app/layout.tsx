@@ -39,7 +39,7 @@ export default function RootLayout({
               <h1 className="text-lg font-semibold">BugBounty</h1><LucideBug />
             </Link>
           </div>
-          <div><Link href={ticketsPath()} className={buttonVariants({ variant: "outline"})}>Tickets</Link></div>
+          <div><Link href={ticketsPath()} className={buttonVariants({ variant: "default"})}>Tickets</Link></div>
         </nav>
         <main className="min-h-screen flex-1 overflow-y-auto overflow-x-hidden py-24 px-8 bg-secondary/20 flex flex-col">
           {children}
