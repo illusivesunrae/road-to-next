@@ -1,3 +1,5 @@
+import { initialTickets } from "../../../data";
+
 type TicketPageProps = {
     params: {
         ticketId: string;
@@ -5,9 +7,16 @@ type TicketPageProps = {
 }
 
 const TicketPage = ({ params }: TicketPageProps) => {
-    return (
+  const ticket = initialTickets.find((ticket) => ticket.id === params.ticketId)
+
+    if (!ticket) {
+      return <div>Ticket not found</div>;
+    }
+
+    return ( 
       <div>
-        <h2>Ticket page {params.ticketId} </h2>
+        <h2 className="text-lg">{ticket.title}</h2>
+        <p className="text-sm">{ticket.content}</p>
       </div>
     );
   }
