@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { Card, CardAction, CardContent,CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 import { initialTickets } from "@/data";
 import { ticketPath } from "@/paths";
 
@@ -35,6 +36,9 @@ const TicketsPage = () => {
           <h2 className="text-3-xl font-bold tracking-tight">Tickets page</h2>
           <p className="text-sm text-muted-foreground">All your tickets in one place</p>
         </div>
+
+        <Separator />
+        
         <div className="flex-1 flex flex-col items-center gap-y-4 animate-fade-from-top">
           {initialTickets.map((ticket) => (
             <Card key={ticket.id} className="w-full max-w-[420px]">
