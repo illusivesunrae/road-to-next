@@ -1,0 +1,26 @@
+{
+  "name": "road-to-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illusivesunrae/road-to-next.git"
+  },
+  "keywords": [],
+  "author": "Rachel O'Connor <racmocon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/illusivesunrae/road-to-next/issues"
+  },
+  "homepage": "https://github.com/illusivesunrae/road-to-next#readme",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "next": "^15.3.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  } 
+}
