@@ -9,7 +9,7 @@ const Heading = ({ title, description }: HeadingProps) => {
     return <>
         <div className="px-8">
           <h2 className="text-3-xl font-bold tracking-tight">{title}</h2>
-          <p className="text-sm text-muted-foreground">{description}</p>
+          {description && (<p className="text-sm text-muted-foreground">{description}</p>) }
         </div>
 
         <Separator />
