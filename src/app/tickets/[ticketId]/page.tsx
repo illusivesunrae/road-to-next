@@ -6,24 +6,24 @@ import { ticketsPath } from "@/paths";
 
 type TicketPageProps = {
   params: {
-    ticketId: string
+    ticketId: string,
   }
 }
 
-const TicketPage = async (props: TicketPageProps) => {
-  const params = await props.params;
-  const ticket = initialTickets.find((ticket) => ticket.id === params.ticketId)
+const TicketPage = async ({ params }: TicketPageProps) => {
+  const { ticketId } = await params
+  const ticket = initialTickets.find((ticket) => ticket.id === ticketId)
 
-  if (!ticket) {
-    return <Placeholder label="Ticket not found" button={<Button asChild variant="outline"><Link href={ticketsPath()}>Return to tickets</Link></Button>} />;
+    if (!ticket) {
+      return <Placeholder label="Ticket not found" button={<Button asChild variant="outline"><Link href={ticketsPath()}>Return to tickets</Link></Button>} />;
+    }
+
+    return ( 
+      <div>
+        <h2 className="text-lg">{ticket.title}</h2>
+        <p className="text-sm">{ticket.content}</p>
+      </div>
+    );
   }
-
-  return ( 
-    <div>
-      <h2 className="text-lg">{ticket.title}</h2>
-      <p className="text-sm">{ticket.content}</p>
-    </div>
-  );
-}
   
   export default TicketPage;
