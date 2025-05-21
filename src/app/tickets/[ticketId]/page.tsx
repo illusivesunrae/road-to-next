@@ -5,13 +5,14 @@ import { initialTickets } from "@/data";
 import { ticketsPath } from "@/paths";
 
 type TicketPageProps = {
-  params: {
-    ticketId: string,
-  }
-}
+  params: Promise<{
+    ticketId: string;
+  }>;
+};
 
 const TicketPage = async ({ params }: TicketPageProps) => {
-  const { ticketId } = await params
+  const { ticketId } = await params;
+  
   const ticket = initialTickets.find((ticket) => ticket.id === ticketId)
 
     if (!ticket) {
