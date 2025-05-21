@@ -5,9 +5,9 @@ import { initialTickets } from "@/data";
 import { ticketsPath } from "@/paths";
 
 type TicketPageProps = {
-  params: Promise<{
-    ticketId: string;
-  }>;
+  params: {
+    ticketId: string
+  }
 }
 
 const TicketPage = async (props: TicketPageProps) => {
